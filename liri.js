@@ -16,9 +16,7 @@ var search = "";
 var command = process.argv[2];
 
 function MovieThis(search) {
-    for (var i = 3; i < process.argv.length; i++) {
-        search += process.argv[i] + " ";
-    }
+
     url = "http://www.omdbapi.com/?t=" + search + "&apikey=trilogy"
     request(url, function (error, response, body) {
 
